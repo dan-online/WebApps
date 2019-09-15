@@ -1,0 +1,37 @@
+{
+  "name": "stackoverflow",
+  "version": "1.0.0",
+  "url": "https://stackoverflow.com",
+  "color": "#f48024",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "USER=$USER sudo electron-builder -m; cp -rf ./dist/mac/* /Applications/"
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "build": {
+    "productName": "Stack Overflow",
+    "artifactName": "${productName}-${os}-${version}.${ext}",
+    "appId": "online.dancodes.apps.${productName}",
+    "mac": {
+        "target": "dir"
+    }
+  },
+  "author": "DanCodes",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "latest",
+    "electron-builder": "latest"
+  },
+  "dependencies": {
+    "custom-electron-titlebar": "^3.1.0"
+  }
+}

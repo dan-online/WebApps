@@ -1,0 +1,37 @@
+{
+  "name": "reddit",
+  "version": "1.0.0",
+  "url": "https://reddit.com",
+  "color": "#FF4500",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "sudo electron-builder -m; cp -rf ./dist/mac/* /Applications/"
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "build": {
+    "productName": "Reddit",
+    "artifactName": "${productName}-${os}-${version}.${ext}",
+    "appId": "online.dancodes.apps.${productName}",
+    "mac": {
+        "target": "dir"
+    }
+  },
+  "author": "DanCodes",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "latest",
+    "electron-builder": "latest"
+  },
+  "dependencies": {
+    "custom-electron-titlebar": "^3.1.0"
+  }
+}
